@@ -236,7 +236,7 @@ fun EventItem(eventData: LinksData?) {
                         .align(Alignment.CenterVertically),
                     elevation = CardDefaults.cardElevation(1.dp),
                 ) {
-                    eventData.original_image?.let {
+                    eventData?.original_image?.let {
                         AsyncImage(
                             modifier = Modifier.fillMaxSize(),
                             model = it,
@@ -280,7 +280,7 @@ fun EventItem(eventData: LinksData?) {
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
                 ) {
-                    eventData.total_clicks?.let {
+                    eventData?.total_clicks?.let {
                         Text(
                             text = it.toString(),
                             style = MaterialTheme.typography.labelLarge,
@@ -298,7 +298,7 @@ fun EventItem(eventData: LinksData?) {
                 }
             }
 
-            eventData.web_link?.let {
+            eventData?.web_link?.let {
                 DottedBorderTextWithCopy("", "", it)
             }
 

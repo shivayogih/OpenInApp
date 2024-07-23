@@ -27,7 +27,7 @@ import com.shivayogi.openinapp.ui.theme.BorderColor_GRAY
 @Composable
 fun AnalyticsView(dashBoardData: DashboardResponse?) {
     Column {
-        OverviewChart(dashBoardData)
+        OverviewChart()
         Spacer(modifier = Modifier.width(16.dp))
         StatsView(dashBoardData)
         Spacer(modifier = Modifier.width(20.dp))
