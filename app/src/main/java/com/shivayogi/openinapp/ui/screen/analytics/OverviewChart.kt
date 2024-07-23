@@ -28,19 +28,14 @@ import androidx.compose.ui.unit.dp
 
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.shivayogi.openinapp.data.models.DashboardResponse
-import com.shivayogi.openinapp.ui.dashboard.utils.displayChart
 import com.shivayogi.openinapp.ui.viewmodels.DashboardViewModel
 import com.shivayogi.openinapp.ui.theme.White
 import com.shivayogi.openinapp.common.DateRangePicker
-
+import com.shivayogi.openinapp.ui.utils.DisplayChart
 
 
 @Composable
-fun OverviewChart(dashBoardData: DashboardResponse?) {
-
-    val viewModel: DashboardViewModel = hiltViewModel()
-    val context = LocalContext.current
-
+fun OverviewChart() {
 
     BoxWithConstraints(
         modifier = Modifier
@@ -77,17 +72,13 @@ fun OverviewChart(dashBoardData: DashboardResponse?) {
                 }
 
                 Spacer(modifier = Modifier.width(8.dp))
-                displayChart()
+                DisplayChart()
             }
 
 
         }
     }
 
-
 }
 
 
-fun Int.dpToPx(context: Context): Float {
-    return this * context.resources.displayMetrics.density
-}

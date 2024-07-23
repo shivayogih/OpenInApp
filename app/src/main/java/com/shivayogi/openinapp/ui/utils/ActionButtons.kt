@@ -1,4 +1,4 @@
-package com.shivayogi.openinapp.ui.dashboard.utils
+package com.shivayogi.openinapp.ui.utils
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background

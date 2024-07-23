@@ -22,9 +22,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
@@ -41,11 +39,11 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.shivayogi.openinapp.R
 import com.shivayogi.openinapp.data.models.DashboardResponse
-import com.shivayogi.openinapp.ui.dashboard.utils.ActionButtons
 import com.shivayogi.openinapp.ui.screen.home.GreetingSection
 import com.shivayogi.openinapp.ui.screen.analytics.AnalyticsView
 import com.shivayogi.openinapp.ui.viewmodels.DashboardViewModel
 import com.shivayogi.openinapp.ui.theme.*
+import com.shivayogi.openinapp.ui.utils.ActionButtons
 import com.shivayogi.openinapp.utils.openWhatsApp
 
 @Composable
@@ -54,8 +52,6 @@ fun LinksScreen(navController: NavController) {
 
     // Collect the state from the ViewModel
     val dashboardResponse by viewModel.dashboardResponse
-    val loadError by viewModel.loadError
-    val isLoading by viewModel.isLoading
 
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
         val boxHeight = maxHeight * 0.15f
@@ -155,22 +151,3 @@ fun PageHeader() {
         }
     }
 }
-
-
-@Composable
-fun RetrySection(
-    error: String,
-    onRetry: () -> Unit
-) {
-    Column {
-        Text(error, color = Color.Red, fontSize = 18.sp)
-        Spacer(modifier = Modifier.height(8.dp))
-        Button(
-            onClick = { onRetry() },
-            modifier = Modifier.align(CenterHorizontally)
-        ) {
-            Text(text = "Retry")
-        }
-    }
-}
-

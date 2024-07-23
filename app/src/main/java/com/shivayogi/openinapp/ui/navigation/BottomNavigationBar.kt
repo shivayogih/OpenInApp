@@ -1,4 +1,4 @@
-package com.shivayogi.openinapp.ui.dashboard.utils
+package com.shivayogi.openinapp.ui.navigation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.sp
 import com.shivayogi.openinapp.ui.theme.BlueSurface
 import com.shivayogi.openinapp.ui.theme.color_active
 import com.shivayogi.openinapp.ui.theme.color_inactive
+import com.shivayogi.openinapp.ui.utils.Screens
 
 @Composable
 fun BottomNavigationBar(

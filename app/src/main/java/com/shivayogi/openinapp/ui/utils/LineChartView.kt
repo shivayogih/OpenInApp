@@ -1,4 +1,4 @@
-package com.shivayogi.openinapp.ui.dashboard.utils
+package com.shivayogi.openinapp.ui.utils
 
 
 import android.graphics.Color
@@ -6,10 +6,6 @@ import android.graphics.drawable.GradientDrawable
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.graphics.Color as ComposeColor
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.XAxis
@@ -107,7 +103,7 @@ fun LineChartView(
 }
 
 @Composable
-fun displayChart() {
+fun DisplayChart() {
     // Example data
     val data = listOf(
         Pair("Jan", 20f),

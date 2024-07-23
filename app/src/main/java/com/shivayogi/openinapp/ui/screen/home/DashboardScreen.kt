@@ -16,13 +16,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.shivayogi.openinapp.ui.dashboard.utils.BottomNavigationBar
-import com.shivayogi.openinapp.ui.dashboard.utils.Screens
+import com.shivayogi.openinapp.ui.navigation.BottomNavigationBar
 import com.shivayogi.openinapp.ui.screen.profile.ProfileScreen
 import com.shivayogi.openinapp.ui.screen.campaign.CampaignScreen
 import com.shivayogi.openinapp.ui.screen.courses.CoursesScreen
 import com.shivayogi.openinapp.ui.screen.linksScreen.AllLinksScreen
 import com.shivayogi.openinapp.ui.screen.linksScreen.LinksScreen
+import com.shivayogi.openinapp.ui.utils.Screens
 
 
 @Composable
@@ -85,13 +85,13 @@ fun DashboardScreen() {
                 composable(Screens.AllLinks.route) { AllLinksScreen(navController,"") }
 
                 composable(
-                    "all_links/{linksType}",
+                    "${Screens.AllLinks.route}/{linksType}",
                     arguments = listOf(
                         navArgument("linksType") { type = NavType.StringType }
                     )
                 ) { backStackEntry ->
-                    val topLinksJson = backStackEntry.arguments?.getString("linksType")
-                    topLinksJson?.let {
+                    val linksType = backStackEntry.arguments?.getString("linksType")
+                    linksType?.let {
                         AllLinksScreen(
                             navController = navController,
                             linksType = it

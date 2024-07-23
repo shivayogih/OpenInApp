@@ -47,7 +47,6 @@ import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.shivayogi.openinapp.R
 import com.shivayogi.openinapp.domain.model.LinksData
-import com.shivayogi.openinapp.ui.dashboard.utils.DottedBorderTextWithCopy
 import com.shivayogi.openinapp.ui.viewmodels.DashboardViewModel
 import com.shivayogi.openinapp.ui.theme.BorderColor_GRAY
 import com.shivayogi.openinapp.ui.theme.TextColor_BLACK
@@ -56,7 +55,8 @@ import com.shivayogi.openinapp.ui.theme.TextColor_GRAY
 import com.shivayogi.openinapp.ui.theme.TextColor_WHITE
 import com.shivayogi.openinapp.ui.theme.White
 import com.shivayogi.openinapp.common.DateTimeUtils
-import com.shivayogi.openinapp.ui.dashboard.utils.Screens
+import com.shivayogi.openinapp.ui.utils.DottedBorderTextWithCopy
+import com.shivayogi.openinapp.ui.utils.Screens
 
 @Composable
 fun TopLinksSection(navController: NavController) {
@@ -205,7 +205,7 @@ fun LinksList(links: List<LinksData>) {
 }
 
 @Composable
-fun EventItem(eventData: LinksData) {
+fun EventItem(eventData: LinksData?) {
     Card(
         modifier = Modifier
             .fillMaxWidth() // Set a fixed width for each card

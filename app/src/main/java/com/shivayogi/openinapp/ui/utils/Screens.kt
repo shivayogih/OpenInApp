@@ -1,4 +1,4 @@
-package com.shivayogi.openinapp.ui.dashboard.utils
+package com.shivayogi.openinapp.ui.utils
 
 sealed class Screens(val route: String) {
     // val items = listOf("Links", "Courses", "Campaigns", "Profile")

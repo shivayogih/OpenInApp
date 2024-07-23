@@ -1,4 +1,4 @@
-package com.shivayogi.openinapp.ui.dashboard.utils
+package com.shivayogi.openinapp.ui.utils
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -117,14 +117,6 @@ fun DottedBorderTextWithCopy(
     }
 }
 
-@Composable
-fun PreviewDottedBorderTextWithCopy() {
-    DottedBorderTextWithCopy(
-        displayText = "Check out this link: Click here for more details.",
-        linkText = "Click here",
-        linkUrl = "https://example.com"
-    )
-}
 
 fun Modifier.dottedBorder(
     color: Color,
