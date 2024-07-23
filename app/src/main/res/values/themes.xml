@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.OpenInApp" parent="android:Theme.Material.Light.NoActionBar" />
+
+
+    <style name="Theme.OpenInAppSplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/app_color</item>
+        <item name="postSplashScreenTheme">@style/Theme.OpenInApp</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+    </style>
+</resources>
